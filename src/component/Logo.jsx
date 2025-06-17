@@ -1,8 +1,12 @@
+import AnimatedBox from "./AnimatedBox";
+
 const Logo = () =>{
   return(
-    <div>
-      My Logo
-    </div>
+    <AnimatedBox direction="slide-left">
+      <div className="text-xl font-bold">
+        My Logo
+      </div>
+    </AnimatedBox>
   )
 }
 export default Logo;
