@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+QLD+Hand:wght@400..700&display=swap');
 
+@theme{
+  --font-edu:'Edu NSW ACT Hand Pre', 'cursive';
+}
 @keyframes slideTop {
   0% { transform: translateY(-100px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }

@@ -4,13 +4,13 @@ import Logo from "./Logo";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center px-24 bg-slate-400 h-14 fixed w-full"
+    <div className="flex justify-between items-center px-24 bg-slate-400 h-14 fixed w-full z-10 "
       
     >
       <div>
         <Logo />
       </div>
-      <div className="flex gap-4 font-bold text-xl text-gray-100">
+      <div className="flex gap-2 font-bold text-xl text-gray-100 font-edu">
         <AnimatedBox direction="slide-top" className="hover:scale-90 transition-transform duration-200">
           <NavLink to="/">Home</NavLink>
         </AnimatedBox>
