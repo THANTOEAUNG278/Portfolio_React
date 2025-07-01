@@ -19,6 +19,16 @@
   0% { transform: translateX(100px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
 }
+@keyframes slideBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 .animated-box {
   padding: 5px;
@@ -27,14 +37,16 @@
 .slide-top { animation: slideTop 0.9s ease-out; }
 .slide-left { animation: slideLeft 0.9s ease-out; }
 .slide-right { animation: slideRight 0.9s ease-out; }
+.slide-bottom { animation: slideBottom 0.9s ease-out; }
+
 
 .animated-box a:hover {
   transform: scale(0.9);
   transition: transform 0.2s ease-in-out;
 }
 body{
-  background-color:slategray;
-  color: aliceblue;
+  background-color:slategrey;
+  color:#ffffff;
 }
 
 @layer utilities {
@@ -43,7 +55,7 @@ body{
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-15px);
     }
   }
 

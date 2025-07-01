@@ -16,7 +16,7 @@ const TypedTitle = () => {
     return () => typed.destroy();
   }, []);
 
-  return <span ref={typedRef} className="text-red-700 font-bold text-xl"></span>;
+  return <span ref={typedRef} className="text-cyan-400 font-bold text-xl"></span>;
 };
 
 export default TypedTitle;

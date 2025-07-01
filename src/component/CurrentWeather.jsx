@@ -19,7 +19,7 @@ const CurrentWeather = () => {
     });
   }, []);
 
-  if (!weather) return <p className="text-gray-400 mx-32"><FiLoader /></p>;
+  if (!weather) return <p className="font-bold mx-32"><FiLoader /></p>;
 
   const iconCode = weather.weather[0].icon;
   const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
@@ -34,8 +34,6 @@ const CurrentWeather = () => {
 
         />
       </div>
-
-      {/* <p className="capitalize text-lg mb-2">{weather.weather[0].description}</p> */}
 
       <div className="space-y-1 text-sm font-bold font-edu mt-0">
         <h4 className=" text-lg mb-2">{weather.name} の天気</h4>
