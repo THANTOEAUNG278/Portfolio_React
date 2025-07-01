@@ -1,6 +1,6 @@
 const Project = () =>{
   return(
-    <div>
+    <div className="py-15">
       hello my Project
     </div>
   )

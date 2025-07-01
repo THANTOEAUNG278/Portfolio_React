@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+QLD+Hand:wght@400..700&display=swap');
 
 @theme{
@@ -31,4 +31,23 @@
 .animated-box a:hover {
   transform: scale(0.9);
   transition: transform 0.2s ease-in-out;
+}
+body{
+  background-color:slategray;
+  color: aliceblue;
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
 }
