@@ -1,7 +1,6 @@
 
 import React from "react";
-import "../index.css"; // Ensure this file exists
-
+import "../index.css"; 
 const AnimatedBox = ({ direction, children, className }) => {
   return <div className={`animated-box ${direction} ${className}`}>{children}</div>;
 };

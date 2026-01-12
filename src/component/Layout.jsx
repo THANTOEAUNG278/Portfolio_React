@@ -3,8 +3,10 @@ import NavBar from "./NavBar"
 const Layout = () =>{
   return(
     <div>
-      <NavBar/>
-      <div>
+      <div className="fixed relative">
+        <NavBar/>
+      </div>
+      <div >
         <Outlet/>
       </div>
     </div>

@@ -1,0 +1,79 @@
+
+.weather-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,.4);
+}
+
+.weather-icon {
+  width: 160px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.info {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.bg-rain {
+  background: linear-gradient(180deg, #1f2937, #0f172a);
+}
+
+.bg-snow {
+  background: linear-gradient(180deg, #94a3b8, #e5e7eb);
+  color: #0f172a;
+}
+
+.bg-night {
+  background: radial-gradient(circle, #5a5a5c, #29292a);
+}
+
+.bg-clear {
+  background: linear-gradient(180deg, #38bdf8, #0ea5e9);
+}
+
+.rain span {
+  position: absolute;
+  top: -40px;
+  width: 2px;
+  height: 25px;
+  background: rgba(173,216,230,.6);
+  animation: rain linear infinite;
+  left: calc(100% * var(--i));
+}
+
+@keyframes rain {
+  to { transform: translateY(300px); }
+}
+
+.snow span {
+  position: absolute;
+  top: -10px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: snow linear infinite;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(300px) translateX(20px);
+  }
+}
+
+.rain span,
+.snow span {
+  left: calc(100% * random());
+  animation-duration: calc(1s + random() * 2);
+}
