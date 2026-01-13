@@ -48,12 +48,12 @@ const Footer = () => {
       ref={footerRef}
       className="flex flex-col items-center gap-6 relative overflow-hidden font-edu"
     >
-      {/* Ready to Collaborate */}
+     
       <p className="text-2xl font-bold text-white text-center">
         Ready to Collaborate?
       </p>
 
-      {/* Glowing & Floating Contact Button */}
+    
       <div ref={buttonRef}>
         <CustomButton
           text="CONTACT ME"
@@ -62,13 +62,13 @@ const Footer = () => {
         />
       </div>
 
-      {/* Credit Text */}
-      <p className="text-gray-300 text-sm mt-2 text-center">
+   
+      <p className="text-gray-300 text-sm text-center">
         coded with by Than Toe Aung
       </p>
 
-      {/* Social Icons */}
-      <div className="flex gap-12 mt-6">
+
+      <div className="flex gap-12">
         <a
           href="https://github.com/yourusername"
           target="_blank"
