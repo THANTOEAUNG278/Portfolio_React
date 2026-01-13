@@ -42,7 +42,6 @@ const Home = () => {
         scrollTrigger: {
           trigger: splitRef.current,
           start: "top 85%",
-          // once: true, 
           toggleActions: "play reverse play reverse",
         },
       }
