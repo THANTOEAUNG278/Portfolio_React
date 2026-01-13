@@ -25,7 +25,7 @@ const About = () => {
         opacity: 1,
         y: 0,
         stagger: 0.05,
-        duration: 0.8,
+        duration: 1.2,
         ease: "power3.out",
         immediateRender: false, 
         scrollTrigger: {
