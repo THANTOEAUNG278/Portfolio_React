@@ -15,30 +15,36 @@ const About = () => {
       type: "words",
     });
 
-    gsap.from(split.words, {
-      opacity: 0,
-      y: 30,
-      stagger: 0.05,
-      duration: 0.8,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: textRef.current,
-        start: "top 80%",    
-        end: "bottom 60%",
-        toggleActions: "play reverse play reverse",
-       
+    const animation = gsap.fromTo(
+      split.words,
+      {
+        opacity: 0,
+        y: 30,
       },
-    });
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.05,
+        duration: 0.8,
+        ease: "power3.out",
+        immediateRender: false, 
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+    
+        },
+      }
+    );
 
     return () => {
+      animation.kill();
       split.revert();
-      ScrollTrigger.kill();
     };
   }, []);
 
   return (
     <div className="px-6 md:px-16 lg:px-32">
-  
       <div className="pt-20">
         <AnimatedBox direction="slide-right">
           <div className="flex items-center justify-center underline">
@@ -63,11 +69,7 @@ const About = () => {
             </h2>
           </AnimatedBox>
 
-         
-          <p
-            ref={textRef}
-            className="pt-4 leading-relaxed"
-          >
+          <p ref={textRef} className="pt-4 leading-relaxed">
             Hello! I'm THAN TOE AUNG, a dedicated student at Shobi University
             with a strong interest in system engineering, web application
             engineering, and fullstack engineering.
