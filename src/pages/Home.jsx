@@ -42,7 +42,7 @@ const Home = () => {
         scrollTrigger: {
           trigger: splitRef.current,
           start: "top 85%",
-          toggleActions: "play reverse play reverse",
+          once: true, 
         },
       }
     );
@@ -117,7 +117,7 @@ const Home = () => {
         </div>
 
   
-        <div className="text-xl font-bold w-full lg:w-auto mr-25">
+        <div className="text-xl font-bold w-full lg:w-auto mr-3 lg:mr-25">
           <CurrentWeather />
         </div>
       </div>
