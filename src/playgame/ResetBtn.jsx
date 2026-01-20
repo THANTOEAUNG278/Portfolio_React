@@ -1,17 +1,10 @@
-const ResetButton = ({ setHistory }) => {
-  const handleReset = () => {
-    setHistory(Array(9).fill(null));
-  };
-
+export default function ResetButton({ setSquares }) {
   return (
     <button
-      onClick={handleReset}
-      className="px-4 py-2 mt-4 bg-red-400 text-white font-semibold rounded-lg hover:bg-red-500 
-                 transition duration-200 shadow-md"
+      onClick={() => setSquares(Array(9).fill(null))}
+      className="mt-2 text-[10px] px-2 py-1 bg-red-600 rounded"
     >
-      Reset Game
+      Reset
     </button>
   );
-};
-
-export default ResetButton;
+}
